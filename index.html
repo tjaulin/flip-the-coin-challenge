@@ -1,58 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="icon"
-      href="resources/favicon.ico"
-      type="image/x-icon"
-      sizes="96x96"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Flip the coin | devChallenges.io</title>
+  <link rel="icon" href="resources/heads.svg" type="image/x-icon" sizes="96x96" />
 
-    <!--You are welcome to delete these styles or modify them in your own stylesheet -->
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
 
-      body {
-        height: 100vh;
-      }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
 
-      .author-info {
-        font-size: 14px;
-        text-align: center;
-        margin-top: 16px;
-        color: rgb(55, 65, 81);
-      }
+  <title>Flip A Coin Game</title>
+</head>
 
-      .author-info a {
-        text-decoration: none;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- 
-
-    Flip a Coin Game
-    Press the coin or the button to flip the coin
-    Head
-    Tail
-    Random
-  
-    -->
-
-    <div class="author-info">
-      Coded by <a href="#">Your Name Here</a> | Challenge by
-      <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
-        >devChallenges.io</a
-      >.
+<body>
+  <h1>Flip the coin</h1>
+  <h2>Press the coin or the button to flip the coin</h2>
+  <div class="flip-box-coin">
+    <input type="hidden" class="input-coin-status" id="input-coin-status" value="heads" />
+    <div class="coin-wrapper" id="coin-wrapper">
+      <img src="resources/heads.svg" class="coin-face front" />
+      <img src="resources/tails.svg" class="coin-face back" />
     </div>
-  </body>
+    <img src="resources/shadow.svg" alt="Shadow of the coin" class="shadow" id="shadow" />
+    <p class="result-coin">Heads</p>
+    <button class="btn" id="random-btn">RANDOM</button>
+  </div>
+
+
+  <div class="author-info">
+    Coded by <a href="https://mes-projets.vercel.app" target="_blank">Gennecode</a> | Challenge by
+    <a href="https://www.devchallenges.io?ref=challenge" target="_blank">devChallenges.io</a>.
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
 </html>
